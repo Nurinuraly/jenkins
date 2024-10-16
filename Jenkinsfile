@@ -1,20 +1,23 @@
 pipeline {
     agent any
+
     stages {
-        stage('Clone') {
+        stage('Checkout') {
             steps {
+                // Pull the latest code from GitHub
                 git 'https://github.com/your-username/your-repo.git'
             }
         }
         stage('Build') {
             steps {
-                // Build commands, e.g., for Maven: sh 'mvn clean install'
-                echo 'Building...'
+                // For demonstration purposes, just echo a message
+                sh 'echo "Building project..."'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing...'
+                // For demonstration purposes, just echo a message
+                sh 'echo "Running tests..."'
             }
         }
     }
