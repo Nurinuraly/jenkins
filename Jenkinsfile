@@ -14,7 +14,7 @@ pipeline {
                 sh 'echo "Building project..."'
             }
         }
-        stage('Test') {
+        stage('Testing') {
             steps {
                 // For demonstration purposes, just echo a message
                 sh 'echo "Running tests..."'
